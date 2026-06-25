@@ -1,0 +1,36 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#02152d;
+  color:white;
+}
+
+nav{
+  background:#01111f;
+  padding:20px;
+  text-align:center;
+}
+
+.hero{
+  text-align:center;
+  padding:60px;
+}
+
+.hero h2{
+  color:#00e1ff;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:#0c2846;
+  width:300px;
+  margin:20px;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 20px #00e1ff55;
+}
