@@ -5,32 +5,44 @@ body{
   color:white;
 }
 
-nav{
+header{
   background:#01111f;
   padding:20px;
   text-align:center;
 }
 
+nav a{
+  color:white;
+  margin:15px;
+  text-decoration:none;
+}
+
 .hero{
   text-align:center;
-  padding:60px;
+  padding:80px 20px;
 }
 
 .hero h2{
-  color:#00e1ff;
+  color:#00d9ff;
 }
 
 .cards{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+  padding:20px;
 }
 
 .card{
-  background:#0c2846;
   width:300px;
+  background:#0c2846;
   margin:20px;
   padding:30px;
   border-radius:20px;
-  box-shadow:0 0 20px #00e1ff55;
+  box-shadow:0 0 20px rgba(0,217,255,.3);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
 }
