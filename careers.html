@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - AK Group of Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #071324; --cyan-glow: #2ce5d6; --card-border: #185a7d;
+            --text-white: #ffffff; --text-dark: #000000;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body {
+            background-color: var(--bg-dark); color: var(--text-white);
+            background-image: radial-gradient(circle at 50% 0%, #0d2847 0%, transparent 50%);
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;
+            background: rgba(7, 19, 36, 0.9); border-bottom: 1px solid rgba(44, 229, 214, 0.2); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-ak {
+            font-size: 2.5rem; font-weight: 800; color: transparent;
+            background: linear-gradient(90deg, #4b7bec, var(--cyan-glow));
+            -webkit-background-clip: text; background-clip: text;
+        }
+        .logo-text h1 { font-size: 1.2rem; letter-spacing: 2px; }
+        .logo-text h2 { font-size: 0.9rem; font-weight: 300; letter-spacing: 3px; }
+        nav ul { display: flex; list-style: none; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+        nav a { color: var(--text-white); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover { color: var(--cyan-glow); }
+
+        .page-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; text-align: center; }
+        .section-title { font-size: 2.5rem; margin-bottom: 20px; color: var(--cyan-glow); }
+        .section-title span { color: var(--text-white); }
+        
+        .content-box {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border);
+            padding: 40px; border-radius: 8px; line-height: 1.6;
+            box-shadow: 0 0 20px rgba(44, 229, 214, 0.1); text-align: left;
+        }
+        
+        .job-listing {
+            background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 6px;
+            margin-top: 20px; border-left: 3px solid var(--cyan-glow);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .job-title { font-size: 1.2rem; font-weight: bold; color: var(--cyan-glow); }
+        .job-type { font-size: 0.9rem; color: #aaa; margin-top: 5px; }
+        .apply-btn {
+            background: transparent; color: #fff; border: 1px solid var(--cyan-glow);
+            padding: 8px 15px; border-radius: 4px; cursor: pointer; transition: 0.3s;
+            text-decoration: none; font-size: 0.9rem;
+        }
+        .apply-btn:hover { background: var(--cyan-glow); color: var(--text-dark); }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; text-align: center; }
+            nav ul { justify-content: center; gap: 15px; }
+            .job-listing { flex-direction: column; align-items: flex-start; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-ak">AK</span>
+            <div class="logo-text"><h1>AK GROUP OF</h1><h2>TECHNOLOGIES</h2></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="careers.html" style="color: var(--cyan-glow);">CAREERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-section">
+        <h2 class="section-title">JOIN OUR <span>TEAM</span></h2>
+        <div class="content-box">
+            <p>We are constantly seeking innovative minds to help us build the future of technology. If you have a passion for complex problem-solving, advanced algorithms, and next-generation connectivity, we want to hear from you.</p>
+            
+            <div class="job-listing">
+                <div>
+                    <div class="job-title">Senior Python Developer</div>
+                    <div class="job-type">Full-Time / Remote</div>
+                </div>
+                <a href="contact.html" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="job-listing">
+                <div>
+                    <div class="job-title">Machine Learning Engineer</div>
+                    <div class="job-type">Full-Time / Hybrid</div>
+                </div>
+                <a href="contact.html" class="apply-btn">Apply Now</a>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
