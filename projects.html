@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - AK Group of Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #071324; --cyan-glow: #2ce5d6; --card-border: #185a7d;
+            --text-white: #ffffff; --text-dark: #000000;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body {
+            background-color: var(--bg-dark); color: var(--text-white);
+            background-image: radial-gradient(circle at 50% 0%, #0d2847 0%, transparent 50%);
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;
+            background: rgba(7, 19, 36, 0.9); border-bottom: 1px solid rgba(44, 229, 214, 0.2); flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-ak {
+            font-size: 2.5rem; font-weight: 800; color: transparent;
+            background: linear-gradient(90deg, #4b7bec, var(--cyan-glow));
+            -webkit-background-clip: text; background-clip: text;
+        }
+        .logo-text h1 { font-size: 1.2rem; letter-spacing: 2px; }
+        .logo-text h2 { font-size: 0.9rem; font-weight: 300; letter-spacing: 3px; }
+        nav ul { display: flex; list-style: none; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+        nav a { color: var(--text-white); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; transition: color 0.3s ease; }
+        nav a:hover { color: var(--cyan-glow); }
+
+        .page-section { padding: 60px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
+        .section-title { font-size: 2.5rem; margin-bottom: 30px; color: var(--cyan-glow); }
+        .section-title span { color: var(--text-white); }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border);
+            padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--cyan-glow);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(44, 229, 214, 0.2);
+        }
+        .project-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .project-tags { margin-top: 15px; display: flex; gap: 10px; }
+        .tag { background: #0d4057; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; text-align: center; }
+            nav ul { justify-content: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-ak">AK</span>
+            <div class="logo-text"><h1>AK GROUP OF</h1><h2>TECHNOLOGIES</h2></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="projects.html" style="color: var(--cyan-glow);">PROJECTS</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-section">
+        <h2 class="section-title">FEATURED <span>PROJECTS</span></h2>
+        
+        <div class="project-card">
+            <h3>Unity Web Platform Infrastructure</h3>
+            <p>A cloud-hosted, scalable web application designed for seamless resource distribution and real-time community connectivity.</p>
+            <div class="project-tags">
+                <span class="tag">Full-Stack</span>
+                <span class="tag">Cloud Deployment</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Civic AI Machine Learning Framework</h3>
+            <p>An intelligent ecosystem leveraging Python-based predictive analytics to streamline regional administrative data and enhance public services.</p>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
