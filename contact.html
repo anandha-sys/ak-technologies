@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - AK Group of Technologies</title>
+    <!-- FontAwesome for the WhatsApp and Email icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* (Same Base Styles as index.html) */
         :root {
-            --bg-dark: #071324;
-            --cyan-glow: #2ce5d6;
-            --card-border: #185a7d;
-            --text-white: #ffffff;
-            --text-dark: #000000;
+            --bg-dark: #071324; --cyan-glow: #2ce5d6; --card-border: #185a7d;
+            --text-white: #ffffff; --text-dark: #000000;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body {
@@ -21,8 +18,6 @@
             background-image: radial-gradient(circle at 50% 0%, #0d2847 0%, transparent 50%);
             min-height: 100vh;
         }
-
-        /* Header */
         .navbar {
             display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;
             background: rgba(7, 19, 36, 0.9); border-bottom: 1px solid rgba(44, 229, 214, 0.2); flex-wrap: wrap;
@@ -39,42 +34,54 @@
         nav a { color: var(--text-white); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; transition: color 0.3s ease; }
         nav a:hover { color: var(--cyan-glow); }
 
-        /* Contact Form Styles */
-        .page-section { padding: 60px 5%; max-width: 600px; margin: 0 auto; text-align: center; }
+        /* Contact Page Styles */
+        .page-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; text-align: center; }
         .section-title { font-size: 2.5rem; margin-bottom: 30px; color: var(--cyan-glow); }
         .section-title span { color: var(--text-white); }
         
-        form { display: flex; flex-direction: column; gap: 20px; }
-        input, textarea {
-            width: 100%; padding: 15px; border-radius: 5px;
-            background: rgba(255, 255, 255, 0.05); color: #fff;
-            border: 1px solid var(--card-border); font-size: 1rem;
+        .content-box {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border);
+            padding: 50px 30px; border-radius: 8px;
+            box-shadow: 0 0 20px rgba(44, 229, 214, 0.1);
         }
-        input:focus, textarea:focus { outline: none; border-color: var(--cyan-glow); }
-        button {
-            padding: 15px; font-size: 1.1rem; font-weight: bold;
-            background: linear-gradient(90deg, #0d4057, var(--card-border));
-            color: #fff; border: 1px solid var(--cyan-glow); border-radius: 5px;
-            cursor: pointer; transition: 0.3s;
+
+        .contact-methods {
+            display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 20px;
         }
-        button:hover { background: var(--cyan-glow); color: var(--text-dark); }
+
+        .contact-card {
+            flex: 1; min-width: 250px;
+            background: rgba(0, 0, 0, 0.4); border: 1px solid var(--card-border);
+            padding: 40px 20px; border-radius: 8px; text-decoration: none; color: var(--text-white);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+        }
+
+        .contact-card i { font-size: 3.5rem; }
+        .contact-card.whatsapp i { color: #25D366; } /* Official WhatsApp Green */
+        .contact-card.email i { color: var(--cyan-glow); }
+        
+        .contact-card h3 { font-size: 1.5rem; letter-spacing: 1px; }
+        .contact-card p { color: #ccc; font-size: 0.95rem; }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(44, 229, 214, 0.3);
+            border-color: var(--cyan-glow);
+        }
 
         @media (max-width: 768px) {
             .navbar { flex-direction: column; text-align: center; }
             nav ul { justify-content: center; gap: 15px; }
+            .contact-methods { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <header class="navbar">
         <div class="logo">
             <span class="logo-ak">AK</span>
-            <div class="logo-text">
-                <h1>AK GROUP OF</h1>
-                <h2>TECHNOLOGIES</h2>
-            </div>
+            <div class="logo-text"><h1>AK GROUP OF</h1><h2>TECHNOLOGIES</h2></div>
         </div>
         <nav>
             <ul>
@@ -88,16 +95,30 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="page-section">
         <h2 class="section-title">GET IN <span>TOUCH</span></h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-            <textarea rows="5" placeholder="How can we help you?" required></textarea>
-            <button type="submit">SEND MESSAGE</button>
-        </form>
-    </main>
+        
+        <div class="content-box">
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Choose your preferred method to reach out to our team directly.</p>
 
+            <div class="contact-methods">
+                
+                <!-- WHATSAPP BUTTON -->
+                <a href="https://wa.me/918590294115" target="_blank" class="contact-card whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Message AK STUDIO</p>
+                </a>
+
+                <!-- EMAIL BUTTON -->
+                <a href="mailto:krishnanhanandha45@gmail.com" class="contact-card email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>krishnanhanandha45@gmail.com</p>
+                </a>
+
+            </div>
+        </div>
+    </main>
 </body>
 </html>
