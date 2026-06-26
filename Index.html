@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Group of Technologies | AI & Innovation</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom 3D & Glassmorphism Utilities */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        body {
+            background-color: #f8fafc;
+            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* Ambient Glowing Blue Gradients */
+        .ambient-blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+
+        .blob-1 {
+            top: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+        }
+
+        .blob-2 {
+            bottom: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #60a5fa 0%, transparent 70%);
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, 50px) scale(1.1); }
+        }
+
+        /* Glassmorphism Card */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px 0 rgba(59, 130, 246, 0.2);
+        }
+
+        /* 3D Floating Elements */
+        .float-3d {
+            animation: hover-3d 6s infinite ease-in-out;
+        }
+
+        @keyframes hover-3d {
+            0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+            50% { transform: translateY(-20px) rotateX(5deg) rotateY(5deg); }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col antialiased text-slate-800">
+
+    <!-- Ambient Background Blobs -->
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 pt-6 px-6">
+        <div class="max-w-7xl mx-auto glass-panel px-6 py-4 flex justify-between items-center rounded-full">
+            <div class="text-2xl font-black tracking-tight text-gradient">
+                AK GROUP
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">Vision</a>
+                <a href="#ai" class="hover:text-blue-600 transition-colors">AI Systems</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all shadow-lg shadow-blue-500/30">
+                Launch App
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Left Content -->
+            <div class="z-10">
+                <div class="inline-block glass-panel px-4 py-2 rounded-full text-blue-600 font-bold text-sm mb-6 shadow-sm">
+                    🚀 Next-Gen Artificial Intelligence
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
+                    Building the <br>
+                    <span class="text-gradient">Future of Tech.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-10 max-w-lg leading-relaxed">
+                    Pioneering advanced AI solutions and futuristic digital infrastructure for the modern ecosystem.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-blue-500/30 hover:scale-105">
+                        Explore Our Tech
+                    </button>
+                    <button class="glass-panel text-slate-800 px-8 py-4 rounded-xl font-semibold hover:bg-white/80 transition-all">
+                        View Documentation
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right 3D Visual -->
+            <div class="relative z-10 flex justify-center items-center float-3d perspective-1000">
+                <div class="w-full max-w-md aspect-square glass-panel flex flex-col items-center justify-center p-8 border-t border-l border-white shadow-2xl relative overflow-hidden">
+                    <!-- Decorative inner UI elements -->
+                    <div class="w-full h-32 rounded-xl bg-gradient-to-r from-blue-500/10 to-transparent mb-4 border border-white/40"></div>
+                    <div class="w-full flex space-x-4">
+                        <div class="h-24 w-1/2 rounded-xl bg-blue-100/50 border border-white/40"></div>
+                        <div class="h-24 w-1/2 rounded-xl bg-blue-100/50 border border-white/40"></div>
+                    </div>
+                    
+                    <!-- Floating abstract element -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-xl opacity-50 mix-blend-multiply"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script for subtle 3D mouse tracking on cards -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-panel');
+            const x = e.clientX / window.innerWidth - 0.5;
+            const y = e.clientY / window.innerHeight - 0.5;
+            
+            cards.forEach(card => {
+                // Apply a very slight tilt based on mouse position
+                card.style.transform = `perspective(1000px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>
